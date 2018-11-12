@@ -1,11 +1,10 @@
-var getOutstanding
 // Calculate interest based on payments/transactions so far on card
 function interestCalculator(creditCard) {
     var current = getOutstandingOnDay(0, creditCard);//outstanding balance on opening day
     var currentsDay=0;//set current day to day 0
     var interest=0;
 
-
+    //calculate interest each day in 30 day cycle, and add to total interest
     for(var i =0; i<=30; i++) {
         var todaysBalance = getOutstandingOnDay(i, creditCard);
         if(todaysBalance!=current) {
@@ -15,7 +14,7 @@ function interestCalculator(creditCard) {
             current = todaysBalance;
             currentsDay = i;
         }
-        else if(i==30 && getOutstandingOnDay(i, creditCard)==current) {
+        else if(i==30 && todaysBalance==current) {
             interest+=(current * (creditCard.apr/365) * (i-currentsDay));
         }
     }

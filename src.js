@@ -9,7 +9,7 @@
 var openAcct = require('./createAccount.js');
 var doTransaction = require('./transaction.js');
 var makePayment = require('./payment.js');
-var seeBalanceDue = require('./outstandingBalance.js')
+var seeBalanceDue = require('./outstandingBalance.js');
 var readlineSync = require('readline-sync');
 
 // Open a new account!

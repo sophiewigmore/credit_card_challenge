@@ -18,7 +18,7 @@ var seeBalanceDue = function seeOutstandingBalance(creditCard) {
     }
     else if(dayToCheck==30) {
         outstanding = creditCard.outstanding + interestCalculator(creditCard);
-        console.log("Outstanding Balance on day" + dayToCheck + ": "+outstanding);
+        console.log("Outstanding Balance on Day " + dayToCheck + ": "+outstanding.toFixed(2)+"\n");
     }
 
     return creditCard;
