@@ -31,7 +31,7 @@ function printNewCreditCardData() {
 function createAccount(doOpen) {
     if(doOpen) {
         var cardDets = readlineSync.question(
-            '(Employee): Enter the Credit Limit (ex. 2000) and APR (ex. 40) separated by just a comma, or type [default] for the default of $1000 credit limit and 35% APR: ')
+            '(Employee): Enter the Credit Limit (ex. 2000) and APR as a percent (ex. 40) separated by just a comma, or type [default] for the default of $1000 credit limit and 35% APR: ')
        
         if(cardDets=="Defaut" || cardDets=="default") {
             creditCard.credit_limit = 1000;
