@@ -27,14 +27,6 @@ function printNewCreditCardData() {
     "\nDays til Payment due: " + (30-creditCard.dayCounter) + 
     "\nOutstanding Balance: " + creditCard.outstanding + "\n");
 }
-function printAllCreditCardData() {
-    return ("\n\nYour Credit Card Info: \nCredit Limit: " + creditCard.credit_limit+
-    "\nAPR: " + creditCard.apr + 
-    "\nDays til Payment due: " + (30-creditCard.dayCounter) + 
-    "\nOutstanding Balance: " + creditCard.outstanding +
-    "\nTransactions: " + creditCard.transactions + 
-    "\nCard Payments: " + creditCard.payments);
-}
 
 function createAccount(doOpen) {
     if(doOpen) {

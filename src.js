@@ -26,7 +26,8 @@ function askForAction() {
 function printAllCreditCardData() {
     return ("\n\nYour Credit Card Info: \nCredit Limit: " + creditCard.credit_limit+
     "\nAPR: " + creditCard.apr + 
-    "\nOutstanding Balance: " + creditCard.outstanding +
+    "\nOutstanding Balance (on day of latest transaction or payment): " + creditCard.outstanding +
+    "\n Day of last payment or transaction (day outstanding balance corresponds to): " +creditCard.dayCounter+
     "\nTransactions:\n" + creditCard.transactions.map((o,i) => {
         var num = i+1;
         return (" "+ num + ". amount: " + o.amount + " day: " + o.dayOfTransaction + "\n");
