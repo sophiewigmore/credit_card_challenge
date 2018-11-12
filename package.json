@@ -1,0 +1,22 @@
+{
+  "name": "credit_card_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophiewigmore/credit_card_challenge.git"
+  },
+  "author": "wigmore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophiewigmore/credit_card_challenge/issues"
+  },
+  "homepage": "https://github.com/sophiewigmore/credit_card_challenge#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
