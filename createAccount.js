@@ -1,10 +1,3 @@
-/**
- * Avant Coding Challenge
- * November 2018
- * 
- * Command Line interface, see read me for instructions
- */
-
 var readlineSync = require('readline-sync');
 
 var creditCard = {

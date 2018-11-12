@@ -7,8 +7,8 @@
 
 
 var openAcct = require('./createAccount.js');
-var makePayment = require('./payment.js');
 var doTransaction = require('./transaction.js');
+var makePayment = require('./payment.js');
 var seeBalanceDue = require('./outstandingBalance.js')
 var readlineSync = require('readline-sync');
 
@@ -19,7 +19,19 @@ function askForAction() {
     return readlineSync.question("What would you like to do now? Type the number of the corresponding option: " + 
         "\n1-Make a transaction"+
         "\n2- Make a card payment"+
-        "\n3-See outstanding balance for given day:\n\n");
+        "\n3-See outstanding balance for given day"+
+        "\n4-See all credit card data:\n\n");
+}
+// Print all credit card data
+function printAllCreditCardData() {
+    return ("\n\nYour Credit Card Info: \nCredit Limit: " + creditCard.credit_limit+
+    "\nAPR: " + creditCard.apr + 
+    "\nOutstanding Balance: " + creditCard.outstanding +
+    "\nTransactions: " + creditCard.transactions.map((o,i) => {
+        var num = i+1;
+        return (" "+ num + ". amount: " + o.amount + " day: " + o.dayOfTransaction + "\n");
+    }) + 
+    "\nCard Payments: " + creditCard.payments);
 }
 
 function run() {
@@ -35,6 +47,9 @@ function run() {
         }
         else if(accountAction==3) {
             seeBalanceDue(creditCard);
+        }
+        else if(accountAction==4) {
+            console.log(printAllCreditCardData());
         }
         else {
             console.log("Invalid action code. Try again");
