@@ -27,11 +27,14 @@ function printAllCreditCardData() {
     return ("\n\nYour Credit Card Info: \nCredit Limit: " + creditCard.credit_limit+
     "\nAPR: " + creditCard.apr + 
     "\nOutstanding Balance: " + creditCard.outstanding +
-    "\nTransactions: " + creditCard.transactions.map((o,i) => {
+    "\nTransactions:\n" + creditCard.transactions.map((o,i) => {
         var num = i+1;
         return (" "+ num + ". amount: " + o.amount + " day: " + o.dayOfTransaction + "\n");
     }) + 
-    "\nCard Payments: " + creditCard.payments);
+    "\nCard Payments:\n" + creditCard.payments.map((p,i) => {
+        var num = i+1;
+        return (" "+ num + ". amount: " + p.amount + " day: " + p.dayOfPayment + "\n");
+    }));
 }
 
 function run() {
