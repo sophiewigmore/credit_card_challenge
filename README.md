@@ -6,6 +6,7 @@ This project was completed in Node.js.
 Inside the credit_card_challenge/ directory from the command line, run the program using:
 
 <b> node src.js </b>
+You need to make sure you have node js installed to run this project. To make sure you do, on the command line type <i> npm --version</i> to check  or go to https://nodejs.org/en/download/ if you don't have it
 
 This will run the project.
 It will ask if you want to create an account, type "Y" if you want to proceed.
