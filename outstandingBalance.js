@@ -57,7 +57,6 @@ function getOutstandingOnDay(dayToCheck, creditCard) {
         amount = transactSum-paymentSum;
         return amount;
     }
-
 }
 
 
